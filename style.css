@@ -1,0 +1,262 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+  background: url(photo/fondo.jpg);
+  background-size: cover;
+}
+
+/* header */
+header {
+  width: 100%;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.671);
+  position: fixed;
+  top: 0;
+}
+
+header h1 {
+  text-align: center;
+  color: white;
+}
+h1:hover {
+  color: aquamarine;
+}
+/* Imagen del Carrito */
+#imgCarrito {
+  width: 50px;
+  height: 50px;
+  background-image: url(photo/carrito2.png);
+  background-size: cover;
+  transition: 0.4s;
+  position: absolute;
+  right: 13%;
+  top: 94px;
+}
+
+#imgCarrito:hover {
+  background-image: url(photo/carrito1.png);
+  transform: scale(1.15);
+}
+
+/*  modal de carrito  */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000bd;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s 0.9s;
+  --transform: translateY(-100vh);
+  --transition: transform 0.8s;
+}
+
+.modal--show {
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity 0.6s;
+  --transform: translateY(0);
+  --transition: transform 0.8s 0.8s;
+}
+
+.modalContainer {
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90%;
+  background-color: white;
+  border-radius: 6px;
+  padding: 3em 2.5em;
+  display: grid;
+  gap: 1em;
+  place-items: center;
+  grid-auto-columns: 100%;
+  transform: var(--transform);
+  transition: transform 0.3s;
+  transition: var(--transition);
+  overflow: scroll;
+}
+
+.botones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.volver {
+  width: 160px;
+  height: 51px;
+  text-decoration: none;
+  color: white;
+  background-color: #c58815;
+  padding: 1em 3em;
+  border: 1px solid;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 300;
+  transition: background-color 0.3s;
+}
+
+.volver:hover {
+  color: #002936;
+  background-color: white;
+}
+
+.volverD {
+  width: 160px;
+  height: 51px;
+  text-decoration: none;
+  color: white;
+  background-color: #ffa600;
+  padding: 1em 3em;
+  border: 1px solid;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 300;
+  transition: background-color 0.3s;
+}
+
+.volverD:hover {
+  color: #f8b332;
+  background-color: white;
+}
+
+.total {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/*  Mostrar Productos  */
+
+#contenedorProductos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10rem;
+}
+.productos {
+  width: 300px;
+  height: 420px;
+  background-color: rgba(0, 0, 0, 0.795);
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.productos h4 {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+.productos p {
+  font-size: 1.4rem;
+}
+
+.productos img {
+  width: 280px;
+  height: 190px;
+  margin-top: 1rem;
+}
+
+.productos button {
+  color: white;
+  text-decoration: none;
+  width: 140px;
+  height: 40px;
+  background-color: #0e797c;
+  padding: 1em 3em;
+  border: 1px solid;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 300;
+  transition: background-color 0.4s;
+}
+
+.productos button:hover {
+  color: #002936;
+  background-color: white;
+}
+
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Productos en el Carrito */
+.productoCarrito {
+  width: 300px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  border: #002936 solid 3px;
+  margin-top: 2px;
+}
+
+.productoCarrito img {
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+  padding: 3px;
+}
+
+.productoCarrito div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productoCarrito div section {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.productoCarrito div h4 {
+  text-align: center;
+  margin: 0;
+}
+
+.productoCarrito div section p {
+  font-weight: 800;
+}
+
+.productoCarrito div button {
+  width: 100px;
+  background-color: brown;
+  border: brown solid 2px;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.4s;
+  border-radius: 6px;
+}
+
+.productoCarrito div button:hover {
+  background-color: white;
+}
+
+.total {
+  text-align: center;
+}
+
+@media screen and (max-width: 426px) {
+  .botones {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

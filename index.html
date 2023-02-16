@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>PreEntrega3-Cavallini</title>
+  </head>
+  <body>
+    <header>
+      <h1>CompuGamer</h1>
+    </header>
+
+    <main>
+      <div id="imgCarrito"></div>
+
+      <div id="contenedorProductos"></div>
+    </main>
+
+    <!-- modal carrito -->
+    <section class="modal" id="modal">
+      <div class="modalContainer">
+        <div id="contenedorCarrito"></div>
+
+        <div class="botones">
+          <button id="enviar" class="volverD">Enviar</button>
+          <button id="volver" class="volver">Volver</button>
+          <button id="vaciarCarrito" class="volver">Borrar carrito</button>
+        </div>
+        <p class="total">El total de la compra es<span id="total"></span></p>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2023 Copyright: CompuGamer</p>
+    </footer>
+
+    <script src="js/productos.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
